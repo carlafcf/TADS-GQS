@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block subtitulo %}
+Listar produtos
+{% endblock %}
+
+{% block conteudo %}
+
+<strong>{{lista_produtos|length}} produtos</strong>
+    {% for produto in lista_produtos  %}
+        <p id="id_{{produto.nome}}_{{produto.fornecedor}}">{{produto}} 
+            <a id="id_button_{{produto.pk}}" class="btn btn-success" href="{% url 'produtos:detalhes_produto' pk=produto.pk %}">Detalhes</a>
+        </p>
+    {% endfor %}
+
+{% endblock %}
+
+{% block rodape %}
+Nosso sistema de compras online
+{% endblock %}
