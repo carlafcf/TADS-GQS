@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block subtitulo %}
+Detalhes produto {{produto}}
+{% endblock %}
+
+{% block conteudo %}
+
+<p id="id_nome"><strong>Nome: </strong> {{produto.nome}} </p>
+<p id="id_fornecedor"><strong>Fornecedor: </strong> {{produto.fornecedor}} </p>
+<p id="id_preco_de_venda"><strong>Preço de venda: </strong> {{produto.preco_de_venda}} </p>
+
+{% endblock %}
+
+{% block rodape %}
+Nosso sistema de compras online
+{% endblock %}
